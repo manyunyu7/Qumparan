@@ -84,13 +84,17 @@ class PostDetailFragment : BaseFragment() {
         viewModel.commentLiveData.observe(viewLifecycleOwner, Observer {
             when (it) {
                 is QumparanResource.Default -> {
+                    showLoading(false)
                 }
                 is QumparanResource.Error -> {
+                    showLoading(false)
                     showToast(it.message.toString())
                 }
                 is QumparanResource.Loading -> {
+                    showLoading(true)
                 }
                 is QumparanResource.Success -> {
+                    showLoading(false)
                     it.data?.let {
                         setupComment(it)
                     }
@@ -122,6 +126,16 @@ class PostDetailFragment : BaseFragment() {
         _binding = PostDetailFragmentBinding.inflate(inflater, container, false)
         val root: View = binding.root
         return root
+    }
+
+    private fun showLoading(b: Boolean) {
+        if (b) {
+            viewGone(binding.rvComment)
+            viewVisible(binding.loading)
+        } else {
+            viewVisible(binding.rvComment)
+            viewGone(binding.loading)
+        }
     }
 
 

@@ -7,7 +7,7 @@
         <entry key="..\:/AndroidStudioProjects/Qumparan/app/src/main/res/layout/activity_container.xml" value="0.209375" />
         <entry key="..\:/AndroidStudioProjects/Qumparan/app/src/main/res/layout/custom_status.xml" value="0.25" />
         <entry key="..\:/AndroidStudioProjects/Qumparan/app/src/main/res/layout/fragment_detail_news.xml" value="0.2" />
-        <entry key="..\:/AndroidStudioProjects/Qumparan/app/src/main/res/layout/fragment_home.xml" value="0.18" />
+        <entry key="..\:/AndroidStudioProjects/Qumparan/app/src/main/res/layout/fragment_home.xml" value="0.14" />
         <entry key="..\:/AndroidStudioProjects/Qumparan/app/src/main/res/layout/fragment_list_photo.xml" value="0.16" />
         <entry key="..\:/AndroidStudioProjects/Qumparan/app/src/main/res/layout/fragment_preview_photo.xml" value="0.22" />
         <entry key="..\:/AndroidStudioProjects/Qumparan/app/src/main/res/layout/item_album.xml" value="0.22" />
@@ -20,7 +20,7 @@
         <entry key="..\:/AndroidStudioProjects/Qumparan/app/src/main/res/layout/post_detail_view_model_fragment.xml" value="0.13333333333333333" />
         <entry key="..\:/AndroidStudioProjects/Qumparan/app/src/main/res/layout/raz_custom_info_horizontal.xml" value="0.5" />
         <entry key="..\:/AndroidStudioProjects/Qumparan/app/src/main/res/layout/raz_custom_info_vert.xml" value="0.25" />
-        <entry key="..\:/AndroidStudioProjects/Qumparan/app/src/main/res/layout/user_profile_fragment.xml" value="0.22" />
+        <entry key="..\:/AndroidStudioProjects/Qumparan/app/src/main/res/layout/user_profile_fragment.xml" value="0.12" />
       </map>
     </option>
   </component>

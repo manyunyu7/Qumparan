@@ -333,9 +333,9 @@
                     android:id="@+id/loading"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:padding="50dp"
+                    android:scaleType="fitXY"
                     app:lottie_autoPlay="true"
-                    app:lottie_fileName=""
+                    app:lottie_fileName="shimmer_list.json"
                     app:lottie_loop="true" />
             </FrameLayout>
 

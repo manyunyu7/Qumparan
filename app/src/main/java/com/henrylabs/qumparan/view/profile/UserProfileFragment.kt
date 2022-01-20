@@ -27,6 +27,7 @@ class UserProfileFragment : BaseFragment() {
     private val mAdapter by lazy { UserAlbumAdapter() }
 
     override fun initUI() {
+        showLoading(true)
         hideActionBar()
         initRv()
         initAdapter()
@@ -55,13 +56,17 @@ class UserProfileFragment : BaseFragment() {
         viewModel.userLiveData.observe(viewLifecycleOwner, Observer {
             when (it) {
                 is QumparanResource.Default -> {
+                    showLoading(false)
                 }
                 is QumparanResource.Error -> {
+                    showLoading(false)
                     showToast(it.message.toString(), true)
                 }
                 is QumparanResource.Loading -> {
+                    showLoading(true)
                 }
                 is QumparanResource.Success -> {
+                    showLoading(false)
                     val data = it.data
                     if (data != null) {
                         binding.tvName.text = data.name
@@ -80,13 +85,17 @@ class UserProfileFragment : BaseFragment() {
         viewModel.userAlbumLiveData.observe(viewLifecycleOwner, Observer {
             when (it) {
                 is QumparanResource.Default -> {
+                    showLoading(false)
                 }
                 is QumparanResource.Error -> {
+                    showLoading(false)
                     showToast(it.message.toString(), true)
                 }
                 is QumparanResource.Loading -> {
+                    showLoading(true)
                 }
                 is QumparanResource.Success -> {
+                    showLoading(false)
                     val data = it.data
                     if (data != null) {
                         mAdapter.setWithNewData(data.toMutableList())
@@ -95,6 +104,14 @@ class UserProfileFragment : BaseFragment() {
                 }
             }
         })
+    }
+
+    private fun showLoading(b: Boolean) {
+        if (b) {
+            viewVisible(binding.loading)
+        } else {
+            viewGone(binding.loading)
+        }
     }
 
     override fun initAction() {

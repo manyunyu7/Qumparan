@@ -71,14 +71,17 @@ class HomeFragment : BaseFragment() {
         viewModel.userLiveData.observe(viewLifecycleOwner, Observer {
             when (it) {
                 is QumparanResource.Default -> {
+                    showLoading(false)
                 }
                 is QumparanResource.Error -> {
+                    showLoading(false)
                     showToast(it.message.toString())
                 }
                 is QumparanResource.Loading -> {
-                    showToast("Loading")
+                    showLoading(true)
                 }
                 is QumparanResource.Success -> {
+                    showLoading(false)
                     listUsers.clear()
                     it.data.let { list ->
                         list.let {
@@ -108,6 +111,16 @@ class HomeFragment : BaseFragment() {
                 }
             }
         })
+    }
+
+    private fun showLoading(b: Boolean) {
+        if (b) {
+            viewGone(binding.rvPosts)
+            viewVisible(binding.loading)
+        } else {
+            viewVisible(binding.rvPosts)
+            viewGone(binding.loading)
+        }
     }
 
     private fun combinePostAndUsers(data: PostResponse?) {
