@@ -7,8 +7,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.Observer
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.henrylabs.qumparan.R
 import com.henrylabs.qumparan.data.remote.QumparanResource
+import com.henrylabs.qumparan.data.remote.reqres.UserAlbumResponse
 import com.henrylabs.qumparan.databinding.UserProfileFragmentBinding
 import com.henrylabs.qumparan.utils.base.BaseFragment
 import org.koin.android.viewmodel.ext.android.viewModel
@@ -20,8 +22,28 @@ class UserProfileFragment : BaseFragment() {
     var _binding: UserProfileFragmentBinding? = null
     val binding get() = _binding as UserProfileFragmentBinding
 
+    private val mAdapter by lazy { UserAlbumAdapter() }
+
     override fun initUI() {
         hideActionBar()
+        initRv()
+        initAdapter()
+    }
+
+    private fun initAdapter() {
+        mAdapter.setupAdapterInterface(object : UserAlbumAdapter.AlbumItemInterface {
+            override fun onclick(model: UserAlbumResponse.UserAlbumResponseItem?) {
+
+            }
+        })
+    }
+
+    private fun initRv() {
+        binding.rvAlbum.apply {
+            adapter = mAdapter
+            layoutManager = LinearLayoutManager(requireContext())
+            setHasFixedSize(true)
+        }
     }
 
     override fun initObserver() {
@@ -30,7 +52,7 @@ class UserProfileFragment : BaseFragment() {
                 is QumparanResource.Default -> {
                 }
                 is QumparanResource.Error -> {
-                    showToast(it.message.toString(),true)
+                    showToast(it.message.toString(), true)
                 }
                 is QumparanResource.Loading -> {
                 }
@@ -49,11 +71,31 @@ class UserProfileFragment : BaseFragment() {
                 }
             }
         })
+
+        viewModel.userAlbumLiveData.observe(viewLifecycleOwner, Observer {
+            when (it) {
+                is QumparanResource.Default -> {
+                }
+                is QumparanResource.Error -> {
+                    showToast(it.message.toString(), true)
+                }
+                is QumparanResource.Loading -> {
+                }
+                is QumparanResource.Success -> {
+                    val data = it.data
+                    if (data != null) {
+                        mAdapter.setWithNewData(data.toMutableList())
+                        mAdapter.notifyDataSetChanged()
+                    }
+                }
+            }
+        })
     }
 
     override fun initAction() {
         val userId = arguments?.getString("userId") ?: ""
         viewModel.fetchUsers(userId)
+        viewModel.fetchAlbum(userId)
     }
 
     override fun initData() {

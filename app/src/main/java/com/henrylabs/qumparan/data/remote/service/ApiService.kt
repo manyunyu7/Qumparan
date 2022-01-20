@@ -34,7 +34,7 @@ interface ApiService {
     @GET("users/{userId}/albums")
     suspend fun getUserAlbum(
         @Path("userId") userId: String,
-    ): Response<UserDetailResponse>
+    ): Response<UserAlbumResponse>
 
     @GET("posts/{postId}/comments")
     suspend fun getPostComments(

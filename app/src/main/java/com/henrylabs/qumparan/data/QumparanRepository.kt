@@ -11,5 +11,5 @@ class QumparanRepository(
     suspend fun getPostDetail(postId: String) = remoteDs.getPostDetail(postId)
     suspend fun getPostComment(postId: String) = remoteDs.getPostComment(postId)
     suspend fun getUserDetail(userId: String) = remoteDs.getUserDetail(userId)
-
+    suspend fun getUserAlbum(userId: String) = remoteDs.getUserAlbum(userId)
 }
