@@ -39,10 +39,13 @@ class PhotoListAdapter : RecyclerView.Adapter<PhotoListAdapter.PhotoListViewHold
                 R.anim.fade_transition_animation
             )
 
+            binding.base.setOnClickListener {
+                adapterInterface.onclick(model)
+            }
+
             Glide.with(mContext)
-                .load(model?.url.toString()+".png")
-                .thumbnail(Glide.with(mContext).load(R.raw.ic_loading_google).fitCenter())
-                .diskCacheStrategy(DiskCacheStrategy.NONE)
+                .load(model?.thumbnailUrl.toString() + ".jpg")
+//                .thumbnail(Glide.with(mContext).load(R.raw.ic_loading_google).fitCenter())
                 .skipMemoryCache(true)
                 .into(binding.photo)
 

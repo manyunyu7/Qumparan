@@ -77,7 +77,7 @@ dependencies {
     implementation 'com.github.bumptech.glide:glide:4.12.0'
 
     implementation "com.airbnb.android:lottie:$lottie_version"
-    implementation 'com.github.chrisbanes:PhotoView:latest.release.here'
+    implementation 'com.github.chrisbanes:PhotoView:2.3.0'
 
 
 

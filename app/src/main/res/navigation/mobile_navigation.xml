@@ -49,5 +49,14 @@
     <fragment
         android:id="@+id/listPhotoFragment"
         android:name="com.henrylabs.qumparan.view.photolist.ListPhotoFragment"
-        android:label="ListPhotoFragment" />
+        android:label="ListPhotoFragment" >
+        <action
+            android:id="@+id/action_listPhotoFragment_to_previewPhotoFragment"
+            app:destination="@id/previewPhotoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/previewPhotoFragment"
+        android:name="com.henrylabs.qumparan.view.preview.PreviewPhotoFragment"
+        android:label="fragment_preview_photo"
+        tools:layout="@layout/fragment_preview_photo" />
 </navigation>

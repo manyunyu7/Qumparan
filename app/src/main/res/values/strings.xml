@@ -11,5 +11,9 @@
     <string name="company_by">"Perusahaan : "</string>
     <string name="comment">Komentar Pengguna</string>
     <string name="list_photo_on_album">List Photo di Album</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="clickp">Klik Foto Untuk Melihat Preview</string>
+    <string name="photo_title">Judul Photo</string>
 
 </resources>

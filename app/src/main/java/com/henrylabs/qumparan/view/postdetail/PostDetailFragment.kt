@@ -102,7 +102,6 @@ class PostDetailFragment : BaseFragment() {
     private fun setupComment(it: PostCommentResponse) {
         mAdapter.setWithNewData(it.toMutableList())
         mAdapter.notifyDataSetChanged()
-        showToast(mAdapter.itemCount.toString())
     }
 
     override fun initAction() {

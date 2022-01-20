@@ -132,7 +132,6 @@ class HomeFragment : BaseFragment() {
             }
         }
 
-        showToast(mAdapter.itemCount.toString())
         mAdapter.data.clear()
         mAdapter.setWithNewData(tempShowedPosts.toMutableList())
         mAdapter.notifyDataSetChanged()

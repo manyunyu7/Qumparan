@@ -4,10 +4,12 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.os.bundleOf
 import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.henrylabs.qumparan.R
 import com.henrylabs.qumparan.data.remote.QumparanResource
 import com.henrylabs.qumparan.data.remote.reqres.AlbumPhotoResponse
 import com.henrylabs.qumparan.data.remote.reqres.PostCommentResponse
@@ -51,6 +53,10 @@ class ListPhotoFragment : BaseFragment() {
     private fun setupAdapter() {
         mAdapter.setupAdapterInterface(object : PhotoListAdapter.PostItemInterface {
             override fun onclick(model: AlbumPhotoResponse.AlbumPhotoResponseItem?) {
+                findNavController().navigate(
+                    R.id.previewPhotoFragment,
+                    bundleOf("url" to model?.url.toString(), "title" to model?.title.toString())
+                )
             }
         })
     }
@@ -77,7 +83,6 @@ class ListPhotoFragment : BaseFragment() {
     private fun setupPhoto(it: AlbumPhotoResponse) {
         mAdapter.setWithNewData(it.toMutableList())
         mAdapter.notifyDataSetChanged()
-        showToast(mAdapter.itemCount.toString())
     }
 
     override fun initAction() {
