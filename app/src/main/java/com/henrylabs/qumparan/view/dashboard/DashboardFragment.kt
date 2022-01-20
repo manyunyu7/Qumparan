@@ -1,4 +1,4 @@
-package com.henrylabs.qumparan.ui.dashboard
+package com.henrylabs.qumparan.view.dashboard
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,7 +8,6 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
-import com.henrylabs.qumparan.R
 import com.henrylabs.qumparan.databinding.FragmentDashboardBinding
 
 class DashboardFragment : Fragment() {

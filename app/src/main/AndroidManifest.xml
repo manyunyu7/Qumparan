@@ -4,13 +4,14 @@
 
     <application
         android:allowBackup="true"
+        android:name=""
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Qumparan">
         <activity
-            android:name=".ContainerActivity"
+            android:name=".view.ContainerActivity"
             android:exported="true"
             android:label="@string/title_activity_container">
             <intent-filter>
@@ -20,7 +21,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".MainActivity"
+            android:name=".view.MainActivity"
             android:exported="true">
 
         </activity>
