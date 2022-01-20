@@ -1,4 +1,4 @@
-package com.henrylabs.qumparan.data.reqres
+package com.henrylabs.qumparan.data.remote.reqres
 
 
 import com.google.gson.annotations.SerializedName

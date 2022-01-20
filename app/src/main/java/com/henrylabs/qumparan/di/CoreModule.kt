@@ -5,7 +5,7 @@ import com.chuckerteam.chucker.api.ChuckerInterceptor
 import com.feylabs.sawitjaya.data.remote.RemoteDataSource
 import com.henrylabs.qumparan.data.QumparanRepository
 import com.henrylabs.qumparan.data.remote.service.ApiService
-import com.henrylabs.qumparan.utils.NETWORK.BASE_URL
+import com.henrylabs.qumparan.utils.Network
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import org.koin.android.ext.koin.androidContext
@@ -34,7 +34,7 @@ val networkModule = module {
 
     single {
         val retrofit = Retrofit.Builder()
-            .baseUrl(BASE_URL)
+            .baseUrl(Network.BASE_URL)
             .addConverterFactory(GsonConverterFactory.create())
             .client(get())
             .build()

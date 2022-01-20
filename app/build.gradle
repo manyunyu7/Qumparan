@@ -68,5 +68,9 @@ dependencies {
     // Timber
     implementation 'com.jakewharton.timber:timber:4.7.1'
 
+    // Interceptor
+    def interceptor_version = "4.7.2"
+    implementation "com.squareup.okhttp3:logging-interceptor:$interceptor_version"
+
 
 }
