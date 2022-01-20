@@ -35,16 +35,12 @@ class ListPostsAdapter : RecyclerView.Adapter<PostViewHolder>() {
 
             binding.tvPost.text = model?.body.toString()
 
-            binding.tvAuthor.title(mContext.getString(R.string.written_by))
-            binding.tvAuthor.value(model?.userName.toString())
-
             binding.tvTitle.text = model?.title.toString()
             binding.tvnumber.text = (adapterPosition + 1).toString()
 
-            binding.tvCompany.build(
-                mContext.getString(R.string.company_by),
-                model?.userCompanyName.toString()
-            )
+            binding.tvAuthor.text=model?.userName.toString()
+            binding.tvCompany.text = model?.userCompanyName.toString()
+
 
         }
     }
