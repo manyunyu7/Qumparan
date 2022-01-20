@@ -57,39 +57,17 @@
             android:fontFamily="@font/poppins_medium"
             android:textAlignment="viewStart"
             android:textColor="@color/color_blue_purplish"
-            android:textSize="20sp"
+            android:textSize="24sp"
             android:textStyle="bold"
             tools:text="Loading" />
 
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="20dp"
-            app:cardCornerRadius="15dp">
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="190dp">
-
-                <ImageView
-                    android:id="@+id/img_news"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:maxHeight="100dp"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/xd_green_bg"
-                    tools:layout_editor_absoluteX="0dp"
-                    tools:layout_editor_absoluteY="0dp" />
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
-        </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:cardCornerRadius="20dp"
             android:layout_marginHorizontal="20dp"
-            android:layout_marginVertical="10dp">
+            android:layout_marginVertical="10dp"
+            app:cardCornerRadius="20dp">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
@@ -97,22 +75,22 @@
                 android:padding="10dp">
 
                 <ImageView
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintBottom_toBottomOf="parent"
                     android:id="@+id/user_photo"
                     android:layout_width="45dp"
                     android:layout_height="45dp"
-                    android:src="@drawable/ic_user" />
+                    android:src="@drawable/ic_user"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <ImageView
                     android:id="@+id/arrow_right"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
                     android:layout_width="45dp"
                     android:layout_height="45dp"
-                    android:src="@drawable/ic_baseline_keyboard_arrow_right_24" />
+                    android:src="@drawable/ic_baseline_keyboard_arrow_right_24"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
                     android:id="@+id/tv_author"
@@ -123,8 +101,8 @@
                     android:textAlignment="viewStart"
                     android:textSize="15sp"
                     android:textStyle="bold"
-                    app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintStart_toEndOf="@id/user_photo"
+                    app:layout_constraintTop_toTopOf="parent"
                     tools:text="Henry Augusta" />
 
                 <TextView
@@ -136,8 +114,8 @@
                     android:textAlignment="viewStart"
                     android:textSize="13sp"
                     android:textStyle="bold"
-                    app:layout_constraintTop_toBottomOf="@id/tv_author"
                     app:layout_constraintStart_toEndOf="@id/user_photo"
+                    app:layout_constraintTop_toBottomOf="@id/tv_author"
                     tools:text="Henry Augusta" />
 
                 <TextView
@@ -149,8 +127,8 @@
                     android:textAlignment="viewStart"
                     android:textSize="13sp"
                     android:textStyle="bold"
-                    app:layout_constraintTop_toBottomOf="@id/tv_email"
                     app:layout_constraintStart_toEndOf="@id/user_photo"
+                    app:layout_constraintTop_toBottomOf="@id/tv_email"
                     tools:text="PT Bukalapak.com" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
@@ -185,6 +163,14 @@
             android:textColor="@color/color_blue_purplish"
             android:textSize="20sp"
             android:textStyle="bold" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_comment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginVertical="5dp"
+            tools:listitem="@layout/item_comment" />
 
     </LinearLayout>
 

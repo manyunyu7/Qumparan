@@ -28,4 +28,15 @@
     <color name="xdRed">#FF4848</color>
     <color name="xdOrange">#FF8748</color>
     <color name="xdGreenMain">#0D8E53</color>
+
+    <color name="black1">#424242</color>
+    <color name="black2">#52575C</color>
+    <color name="black3">#A0A4A8</color>
+    <color name="black4">#A6A6A6</color>
+    <color name="black5">#E8E8E8</color>
+    <color name="black6">#F5F5F5</color>
+    <color name="black7">#FAFAFA</color>
+    <color name="green50">#3BA064</color>
+    <color name="green40">#56C281</color>
+    <color name="green60">#2A844E</color>
 </resources>

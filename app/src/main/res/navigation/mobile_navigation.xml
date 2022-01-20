@@ -9,7 +9,11 @@
         android:id="@+id/navigation_home"
         android:name="com.henrylabs.qumparan.view.home.HomeFragment"
         android:label="@string/title_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_navigation_home_to_postDetailFragment"
+            app:destination="@id/postDetailFragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/navigation_dashboard"
@@ -22,4 +26,8 @@
         android:name="com.henrylabs.qumparan.view.notifications.NotificationsFragment"
         android:label="@string/title_notifications"
         tools:layout="@layout/fragment_notifications" />
+    <fragment
+        android:id="@+id/postDetailFragment"
+        android:name="com.henrylabs.qumparan.view.postdetail.PostDetailFragment"
+        android:label="PostDetailFragment" />
 </navigation>

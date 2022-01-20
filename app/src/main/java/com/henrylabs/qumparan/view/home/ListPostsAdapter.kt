@@ -3,6 +3,7 @@ package com.henrylabs.qumparan.view.home
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.animation.AnimationUtils
 import androidx.recyclerview.widget.RecyclerView
 import com.henrylabs.qumparan.R
 import com.henrylabs.qumparan.databinding.ItemGridRsBinding
@@ -29,6 +30,11 @@ class ListPostsAdapter : RecyclerView.Adapter<PostViewHolder>() {
         fun onBInd(model: ShowedPosts?) {
             val mContext = binding.root.context
 
+            binding.base.animation = AnimationUtils.loadAnimation(
+                mContext,
+                R.anim.fade_transition_animation
+            )
+
             binding.root.setOnClickListener {
                 adapterInterface.onclick(model)
             }
@@ -38,7 +44,7 @@ class ListPostsAdapter : RecyclerView.Adapter<PostViewHolder>() {
             binding.tvTitle.text = model?.title.toString()
             binding.tvnumber.text = (adapterPosition + 1).toString()
 
-            binding.tvAuthor.text=model?.userName.toString()
+            binding.tvAuthor.text = model?.userName.toString()
             binding.tvCompany.text = model?.userCompanyName.toString()
 
 

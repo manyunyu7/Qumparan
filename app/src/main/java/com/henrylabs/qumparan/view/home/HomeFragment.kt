@@ -4,8 +4,11 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.os.bundleOf
 import androidx.lifecycle.Observer
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.henrylabs.qumparan.R
 import com.henrylabs.qumparan.data.remote.QumparanResource
 import com.henrylabs.qumparan.data.remote.reqres.PostResponse
 import com.henrylabs.qumparan.data.remote.reqres.UserResponse
@@ -41,7 +44,12 @@ class HomeFragment : BaseFragment() {
     private fun initAdapter() {
         mAdapter.setupAdapterInterface(object : ListPostsAdapter.PostItemInterface {
             override fun onclick(model: ShowedPosts?) {
-
+                findNavController().navigate(
+                    R.id.postDetailFragment,
+                    bundleOf(
+                        "postModel" to model,
+                    )
+                )
             }
 
             override fun onUserClick(model: ShowedPosts?) {
@@ -116,7 +124,8 @@ class HomeFragment : BaseFragment() {
                         title = title.toString(),
                         body = body.toString(),
                         userName = userCred.first,
-                        userCompanyName = userCred.second
+                        userCompanyName = userCred.second,
+                        userEmail = findUserEmail(userId)
                     )
                 )
             }
@@ -139,6 +148,17 @@ class HomeFragment : BaseFragment() {
         }
 
         return Pair(userName, userCompany)
+    }
+
+    private fun findUserEmail(userId: Int): String {
+        var userEmail = ""
+        listUsers.forEachIndexed { index, userResponseItem ->
+            if (userId.toString() == userResponseItem.id.toString()) {
+                userEmail = userResponseItem.email
+            }
+        }
+
+        return userEmail
     }
 
 

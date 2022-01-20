@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Montserrat -->
+    <style name="Montserrat">
+        <item name="android:fontFamily">@font/montserrat_regular</item>
+    </style>
+
+    <style name="Montserrat.Bold">
+        <item name="android:fontFamily">@font/montserrat_bold</item>
+    </style>
+
+    <style name="Montserrat.Bold.Green50">
+        <item name="android:textColor">@color/green50</item>
+    </style>
+
+    <style name="Montserrat.Bold.Green50.12sp">
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="Montserrat.Bold.Green50.14sp">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="Montserrat.Bold.Green50.16sp">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="Montserrat.Bold.Green60">
+        <item name="android:textColor">@color/green60</item>
+    </style>
+
+    <style name="Montserrat.Bold.Green60.20sp">
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="Montserrat.Bold.White">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="Montserrat.Bold.Black1">
+        <item name="android:textColor">@color/black1</item>
+    </style>
+
+    <style name="Montserrat.Bold.Black2">
+        <item name="android:textColor">@color/black2</item>
+    </style>
+
+    <style name="Montserrat.Bold.Black1.12sp">
+        <item name="android:textSize">12sp</item>
+    </style>
+
+
+    <style name="Montserrat.Bold.Black3">
+        <item name="android:textColor">@color/black3</item>
+    </style>
+
+    <style name="Montserrat.Bold.Black3.14sp">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="Montserrat.Black4">
+        <item name="android:textColor">@color/black4</item>
+    </style>
+
+    <style name="Montserrat.Bold.Black4">
+        <item name="android:textColor">@color/black4</item>
+    </style>
+
+
+    <style name="Montserrat.Black">
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="Montserrat.Black1">
+        <item name="android:textColor">@color/black1</item>
+    </style>
+
+    <style name="Montserrat.Black1.10sp">
+        <item name="android:textSize">10sp</item>
+    </style>
+
+    <style name="Montserrat.Bold.Black1.14sp">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="Montserrat.Bold.Black1.16sp">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="Montserrat.Black1.12sp">
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="Montserrat.Black1.13sp">
+        <item name="android:textSize">13sp</item>
+    </style>
+
+    <style name="Montserrat.Black1.14sp">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="Montserrat.Black1.16sp">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="Montserrat.Black1.20sp">
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="Montserrat.Black1.17sp">
+        <item name="android:textSize">17sp</item>
+    </style>
+
+    <style name="Montserrat.Black1.18sp">
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="Montserrat.Black1.19sp">
+        <item name="android:textSize">19sp</item>
+    </style>
+
+    <style name="Montserrat.Black1.24sp">
+        <item name="android:textSize">24sp</item>
+    </style>
+
+    <style name="Montserrat.Bold.Black1.18sp">
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="Montserrat.Bold.Black1.20sp">
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="Montserrat.Bold.Black1.24sp">
+        <item name="android:textSize">24sp</item>
+    </style>
+
+    <style name="Montserrat.Black2">
+        <item name="android:textColor">@color/black2</item>
+    </style>
+
+    <style name="Montserrat.Black2.12sp">
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="Montserrat.Black2.14sp">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="Montserrat.Black2.16sp">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="Montserrat.Black2.18sp">
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="Montserrat.Bold.Black2.14sp">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="Montserrat.Black3">
+        <item name="android:textColor">@color/black3</item>
+    </style>
+
+    <style name="Montserrat.Black3.10sp">
+        <item name="android:textSize">10sp</item>
+    </style>
+
+    <style name="Montserrat.Black3.11sp">
+        <item name="android:textSize">11sp</item>
+    </style>
+
+    <style name="Montserrat.Black3.12sp">
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="Montserrat.Black3.13sp">
+        <item name="android:textSize">13sp</item>
+    </style>
+
+    <style name="Montserrat.Black3.14sp">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="Montserrat.Black3.16sp">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="Montserrat.Black4.16sp">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="Montserrat.Black4.14sp">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="Montserrat.Black5">
+        <item name="android:textColor">@color/black5</item>
+    </style>
+
+    <style name="Montserrat.Green50">
+        <item name="android:textColor">@color/green50</item>
+    </style>
+
+    <style name="Montserrat.Green50.10sp">
+        <item name="android:textSize">10sp</item>
+    </style>
+
+    <style name="Montserrat.Green50.12sp">
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="Montserrat.Green50.14sp">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="Montserrat.Green50.15sp">
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <style name="Montserrat.Green50.16sp">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="Montserrat.White">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="Montserrat.White.10sp">
+        <item name="android:textSize">10sp</item>
+    </style>
+
+    <style name="Montserrat.White.12sp">
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="Montserrat.White.14sp">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="Montserrat.White.16sp">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="Montserrat.White.18sp">
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="Montserrat.White.20sp">
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="Montserrat.Bold.White.14sp">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="Montserrat.Bold.White.16sp">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="Montserrat.Bold.White.18sp">
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="Montserrat.Bold.White.20sp">
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="Montserrat.Bold.White.24sp">
+        <item name="android:textSize">24sp</item>
+    </style>
+
+</resources>
