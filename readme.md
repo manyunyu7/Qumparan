@@ -1,6 +1,6 @@
 ## About App
 
-This app is created as part of Kumparan Android Developer Apprenticeship recruitment.
+This app is created as part of Kumparan Android Developer Apprenticeship recruitment, consuming API from https://jsonplaceholder.typicode.com/
 - Architectural Pattern
 - MVVM
 - Kotlin
@@ -11,7 +11,7 @@ This app is created as part of Kumparan Android Developer Apprenticeship recruit
 - [X] List posts from all user
 - [x] Post detail
 
-####Additional Task
+#### Additional Task
 - [x] User Detail
     - User name
     - User email
@@ -24,3 +24,5 @@ This app is created as part of Kumparan Android Developer Apprenticeship recruit
     - It will navigate to photo detail page
 - [x] List photos from user albums
 - [X] Detail of photo
+
+Thank You 🙏
