@@ -4,4 +4,8 @@
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
+
+    <string name="prixa">Artificial Intelligent dari Prixa.ai akan membantu kamu menganalisa gejala Covid</string>
+    <string name="gugus_tugas">2. https://data.covid19.go.id/ : Dukungan API untuk data Covid 19 Indonesia secara Realtime</string>
+
 </resources>
