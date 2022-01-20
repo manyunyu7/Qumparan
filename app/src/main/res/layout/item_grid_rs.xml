@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tool="http://schemas.android.com/tools"
     android:id="@+id/root"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -25,7 +26,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
-
                 <RelativeLayout
                     android:id="@+id/relative_left"
                     android:layout_width="wrap_content"
@@ -33,53 +33,39 @@
 
 
                     <androidx.cardview.widget.CardView
-                        android:layout_width="100dp"
-                        android:layout_height="100dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:layout_margin="4dp"
+                        app:cardBackgroundColor="@color/color_blue_purplish"
                         app:cardCornerRadius="15dp">
 
-                        <ImageView
-                            android:id="@+id/iv_main_image"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:scaleType="centerCrop"
-                            android:src="@drawable/ic_info" />
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:id="@+id/tvnumber"
+                                android:paddingVertical="20dp"
+                                android:paddingHorizontal="30dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/montserrat_regular"
+                                android:textAlignment="center"
+                                android:textColor="@color/white"
+                                android:textSize="18sp"
+                                android:textStyle="bold"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
                     </androidx.cardview.widget.CardView>
 
 
-
                 </RelativeLayout>
 
                 <RelativeLayout
-                    android:id="@+id/relative_end"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentEnd="true"
-                    android:layout_marginEnd="10dp"
-                    android:layout_toEndOf="@id/relative_left">
-
-
-                    <com.henrylabs.qumparan.customview.RazCustomInfoSingleLine
-                        android:id="@+id/transaction_code"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="10dp"
-                        app:customInfoHzTitle="Kode Transaksi " />
-
-                    <com.henrylabs.qumparan.customview.CustomStatus
-                        android:id="@+id/status"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@id/transaction_code"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginEnd="10dp"
-                        />
-
-                </RelativeLayout>
-
-
-                <RelativeLayout
-                    android:layout_below="@id/relative_end"
                     android:id="@+id/relative_right"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -104,80 +90,49 @@
                     </androidx.cardview.widget.CardView>
 
                     <TextView
-                        android:id="@+id/label_user_name"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginHorizontal="5dp"
-                        android:layout_toEndOf="@id/container_profile_picture"
-                        android:ellipsize="marquee"
-                        android:fontFamily="@font/montserrat_regular"
-                        android:singleLine="true"
-                        android:text="Pemilik : "
-                        android:textColor="@color/color_blue_purplish"
-                        android:textSize="15sp" />
-
-                    <TextView
-                        android:id="@+id/tv_user_name"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="10dp"
-                        android:layout_toEndOf="@id/label_user_name"
-                        android:fontFamily="@font/montserrat_regular"
-                        android:text="Razky Febriansyah"
-                        android:textColor="@color/color_blue_purplish"
-                        android:textSize="15sp" />
-
-                    <TextView
-                        android:id="@+id/label_est_weight"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@id/tv_user_name"
-                        android:layout_marginHorizontal="5dp"
-                        android:layout_toEndOf="@id/container_profile_picture"
-                        android:ellipsize="marquee"
-                        android:fontFamily="@font/montserrat_regular"
-                        android:singleLine="true"
-                        android:text="Perkiraan Berat : "
-                        android:textColor="@color/color_blue_purplish"
-                        android:textSize="15sp" />
-
-                    <TextView
-                        android:id="@+id/tv_est_weight"
+                        android:id="@+id/tv_title"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_below="@id/tv_user_name"
                         android:layout_marginHorizontal="5dp"
-                        android:layout_toEndOf="@id/label_est_weight"
                         android:ellipsize="marquee"
-                        android:fontFamily="@font/montserrat_regular"
-                        android:singleLine="true"
-                        android:text="500 Kg "
+                        android:textStyle="bold"
+                        android:fontFamily="@font/poppins_medium"
                         android:textColor="@color/color_blue_purplish"
-                        android:textSize="15sp" />
+                        android:textSize="15sp"
+                        tool:text="Lorem Ipsum" />
+
+
+                    <TextView
+                        android:id="@+id/tv_post"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_title"
+                        android:layout_marginHorizontal="5dp"
+                        android:ellipsize="marquee"
+                        android:maxLines="3"
+                        android:fontFamily="@font/poppins_regular"
+                        android:textColor="@color/color_blue_purplish"
+                        android:textSize="15sp"
+                        tool:text="Lorem Ipsum" />
 
                 </RelativeLayout>
             </RelativeLayout>
 
-            <TextView
-                android:id="@+id/tv_est_price"
+            <com.henrylabs.qumparan.customview.RazCustomInfoSingleLine
+                android:id="@+id/tv_author"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginHorizontal="5dp"
                 android:layout_marginStart="5dp"
-                android:ellipsize="marquee"
-                android:fontFamily="@font/montserrat_regular"
-                android:singleLine="true"
-                android:text="Estimasi Harga : "
-                android:textColor="@color/color_blue_purplish"
-                android:textSize="18sp" />
+                app:customInfoHzContent="Ditulis Oleh"
+                app:customInfoHzTitle="Subhan Bawazier" />
 
             <com.henrylabs.qumparan.customview.RazCustomInfoSingleLine
-                android:id="@+id/tv_date"
+                android:id="@+id/tv_company"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="5dp"
-                app:customInfoHzTitle="24/08/00" />
-
+                app:customInfoHzContent="Subhan Bawazier"
+                app:customInfoHzTitle="Ditulis Oleh" />
 
         </LinearLayout>
     </androidx.cardview.widget.CardView>

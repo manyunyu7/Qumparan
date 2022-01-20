@@ -271,6 +271,37 @@
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
+            <TextView
+                android:id="@+id/tvMainDescPosts"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/containerCase"
+                android:layout_alignParentStart="true"
+                android:layout_marginHorizontal="20dp"
+                android:fontFamily="@font/sf_pro_display"
+                android:text="Info/Post Terbaru"
+                android:textColor="@color/colorBlack"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/tvSecondaryDescPosts"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_marginHorizontal="20dp"
+                android:layout_below="@id/tvMainDescPosts"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Menampilkan seluruh post dari pengguna"
+                android:textColor="@color/secondaryText"
+                android:textSize="13dp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_posts"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvSecondaryDescPosts"
+                android:layout_marginHorizontal="20dp"
+                tools:listitem="@layout/item_grid_rs" />
 
             <RelativeLayout
                 android:id="@+id/btnOpenAI"

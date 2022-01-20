@@ -7,5 +7,7 @@
 
     <string name="prixa">Artificial Intelligent dari Prixa.ai akan membantu kamu menganalisa gejala Covid</string>
     <string name="gugus_tugas">2. https://data.covid19.go.id/ : Dukungan API untuk data Covid 19 Indonesia secara Realtime</string>
+    <string name="written_by">"Ditulis Oleh : "</string>
+    <string name="company_by">"Perusahaan : "</string>
 
 </resources>

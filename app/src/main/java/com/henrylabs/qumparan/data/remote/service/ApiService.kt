@@ -1,5 +1,6 @@
 package com.henrylabs.qumparan.data.remote.service
 
+import com.henrylabs.qumparan.data.remote.reqres.PostResponse
 import com.henrylabs.qumparan.data.remote.reqres.UserResponse
 import retrofit2.Response
 import retrofit2.http.*
@@ -18,5 +19,7 @@ interface ApiService {
     @GET("/users")
     suspend fun getUsers(): Response<UserResponse>
 
+    @GET("/posts")
+    suspend fun getPosts(): Response<PostResponse>
 
 }

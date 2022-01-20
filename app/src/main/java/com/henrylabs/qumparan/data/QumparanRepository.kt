@@ -7,5 +7,6 @@ class QumparanRepository(
 ) {
 
    suspend fun getUsers() = remoteDs.getUsers()
+   suspend fun getPosts() = remoteDs.getPosts()
 
 }

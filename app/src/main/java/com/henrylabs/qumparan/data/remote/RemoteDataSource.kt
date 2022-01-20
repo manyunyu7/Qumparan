@@ -12,4 +12,7 @@ class RemoteDataSource(
      */
     suspend fun getUsers() = commonService.getUsers()
 
+
+    suspend fun getPosts() = commonService.getPosts()
+
 }
