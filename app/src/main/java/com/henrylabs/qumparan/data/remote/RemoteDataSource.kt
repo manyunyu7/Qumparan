@@ -18,4 +18,6 @@ class RemoteDataSource(
     suspend fun getPostDetail(postId: String) = commonService.getPostDetail(postId)
     suspend fun getPostComment(postId: String) = commonService.getPostComments(postId)
 
+    suspend fun getUserDetail(userId: String) = commonService.getUserDetail(userId)
+
 }

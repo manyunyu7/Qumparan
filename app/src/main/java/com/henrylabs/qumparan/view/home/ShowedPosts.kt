@@ -11,4 +11,5 @@ data class ShowedPosts(
     val userName: String,
     val userCompanyName: String,
     val userEmail: String,
+    val userId : String
     ) : Parcelable

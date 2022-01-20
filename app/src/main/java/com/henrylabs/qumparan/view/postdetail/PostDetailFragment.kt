@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.os.bundleOf
 import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -47,6 +48,13 @@ class PostDetailFragment : BaseFragment() {
                 tvContent.text = model?.body
                 tvEmail.text = model?.userEmail
                 tvTitle.text = model?.title
+
+                cardProfile.setOnClickListener {
+                    findNavController().navigate(
+                        R.id.userProfileFragment,
+                        bundleOf("userId" to model?.userId.toString())
+                    )
+                }
             }
         }
     }
@@ -66,6 +74,7 @@ class PostDetailFragment : BaseFragment() {
             }
 
             override fun onUserClick(model: PostCommentResponse.PostCommentResponseItem?) {
+
             }
 
         })

@@ -1,9 +1,6 @@
 package com.henrylabs.qumparan.data.remote.service
 
-import com.henrylabs.qumparan.data.remote.reqres.PostCommentResponse
-import com.henrylabs.qumparan.data.remote.reqres.PostDetailResponse
-import com.henrylabs.qumparan.data.remote.reqres.PostResponse
-import com.henrylabs.qumparan.data.remote.reqres.UserResponse
+import com.henrylabs.qumparan.data.remote.reqres.*
 import retrofit2.Call
 import retrofit2.Response
 import retrofit2.http.*
@@ -28,6 +25,16 @@ interface ApiService {
     fun getPostDetail(
         @Path("postId") postId: String,
     ): Response<PostDetailResponse>
+
+    @GET("users/{userId}/")
+    suspend fun getUserDetail(
+        @Path("userId") userId: String,
+    ): Response<UserDetailResponse>
+
+    @GET("users/{userId}/albums")
+    suspend fun getUserAlbum(
+        @Path("userId") userId: String,
+    ): Response<UserDetailResponse>
 
     @GET("posts/{postId}/comments")
     suspend fun getPostComments(

@@ -125,7 +125,8 @@ class HomeFragment : BaseFragment() {
                         body = body.toString(),
                         userName = userCred.first,
                         userCompanyName = userCred.second,
-                        userEmail = findUserEmail(userId)
+                        userEmail = findUserEmail(userId),
+                        userId = userId.toString()
                     )
                 )
             }
