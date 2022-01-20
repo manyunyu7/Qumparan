@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="RazAlertContainer">
+        <attr name="alertTitle" format="string" />
+        <attr name="alertContent" format="string" />
+    </declare-styleable>
+
+    <declare-styleable name="RazCustomInfo">
+        <attr name="customInfoTitle" format="string" />
+        <attr name="customInfoContent" format="string" />
+    </declare-styleable>
+
+    <declare-styleable name="RazCustomInfoSingleLine">
+        <attr name="customInfoHzTitle" format="string" />
+        <attr name="customInfoHzContent" format="string" />
+        <attr name="customInfoHzHint" format="string" />
+        <attr name="customInfoHzFontSize" format="float" />
+        <attr name="isHintVisible" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="CustomStatus">
+        <attr name="CustomTitle" format="string" />
+        <attr name="CustomStatus" format="string" />
+    </declare-styleable>
+
+    <declare-styleable name="CustomButtonLeftImage">
+        <attr name="customButtonLeftBackground" format="color" />
+        <attr name="customButtonLeftImage" format="integer" />
+        <attr name="customButtonLeftText" format="string" />
+    </declare-styleable>
+</resources>

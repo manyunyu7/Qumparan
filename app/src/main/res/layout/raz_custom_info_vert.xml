@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/tvInfoTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="2dp"
+        android:fontFamily="@font/jaldi_bold"
+        android:textColor="@color/color_blue_golapak"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Info"
+        />
+
+    <TextView
+        android:id="@+id/tvInfoValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/Montserrat.Black2.14sp"
+        android:layout_marginBottom="2dp"
+        android:text=""
+        tools:text="Content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvInfoTitle" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
