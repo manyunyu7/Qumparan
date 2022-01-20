@@ -41,5 +41,13 @@
         android:id="@+id/userProfileFragment"
         android:name="com.henrylabs.qumparan.view.profile.UserProfileFragment"
         android:label="user_profile_fragment"
-        tools:layout="@layout/user_profile_fragment" />
+        tools:layout="@layout/user_profile_fragment" >
+        <action
+            android:id="@+id/action_userProfileFragment_to_listPhotoFragment"
+            app:destination="@id/listPhotoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/listPhotoFragment"
+        android:name="com.henrylabs.qumparan.view.photolist.ListPhotoFragment"
+        android:label="ListPhotoFragment" />
 </navigation>

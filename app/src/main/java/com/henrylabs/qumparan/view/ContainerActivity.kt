@@ -20,7 +20,7 @@ class ContainerActivity : AppCompatActivity() {
         binding = ActivityContainerBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val navView: BottomNavigationView = binding.navView
+        // val navView: BottomNavigationView = binding.navView
 
         val navController = findNavController(R.id.nav_host_fragment_activity_container)
         // Passing each menu ID as a set of Ids because each
@@ -31,6 +31,6 @@ class ContainerActivity : AppCompatActivity() {
             )
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
-        navView.setupWithNavController(navController)
+        //navView.setupWithNavController(navController)
     }
 }

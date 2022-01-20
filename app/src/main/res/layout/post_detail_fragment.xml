@@ -43,8 +43,7 @@
                 android:textColor="@color/color_blue_purplish"
                 android:textSize="17sp"
                 android:textStyle="bold"
-                android:visibility="gone"
-                tools:text="Apa Itu BLT" />
+                android:visibility="gone" />
         </RelativeLayout>
 
 

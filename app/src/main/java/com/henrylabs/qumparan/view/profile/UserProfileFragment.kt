@@ -6,7 +6,9 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.os.bundleOf
 import androidx.lifecycle.Observer
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.henrylabs.qumparan.R
 import com.henrylabs.qumparan.data.remote.QumparanResource
@@ -33,7 +35,10 @@ class UserProfileFragment : BaseFragment() {
     private fun initAdapter() {
         mAdapter.setupAdapterInterface(object : UserAlbumAdapter.AlbumItemInterface {
             override fun onclick(model: UserAlbumResponse.UserAlbumResponseItem?) {
-
+                findNavController().navigate(
+                    R.id.listPhotoFragment,
+                    bundleOf("albumId" to model?.id.toString())
+                )
             }
         })
     }

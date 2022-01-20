@@ -10,5 +10,6 @@
     <string name="written_by">"Ditulis Oleh : "</string>
     <string name="company_by">"Perusahaan : "</string>
     <string name="comment">Komentar Pengguna</string>
+    <string name="list_photo_on_album">List Photo di Album</string>
 
 </resources>

@@ -36,6 +36,11 @@ interface ApiService {
         @Path("userId") userId: String,
     ): Response<UserAlbumResponse>
 
+    @GET("albums/{albumId}/photos")
+    suspend fun getPhotoByAlbum(
+        @Path("albumId") albumId: String,
+    ): Response<AlbumPhotoResponse>
+
     @GET("posts/{postId}/comments")
     suspend fun getPostComments(
         @Path("postId") postId: String,

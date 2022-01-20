@@ -20,5 +20,6 @@ class RemoteDataSource(
 
     suspend fun getUserDetail(userId: String) = commonService.getUserDetail(userId)
     suspend fun getUserAlbum(userId: String) = commonService.getUserAlbum(userId)
+    suspend fun getAlbumPhoto(albumId: String) = commonService.getPhotoByAlbum(albumId)
 
 }
